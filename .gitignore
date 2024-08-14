@@ -1,3 +1,4 @@
+#To make sure these files never commited or sent to GitHub
 core.Microsoft*
 core.mongo*
 core.python*
@@ -6,3 +7,4 @@ __pycache__/
 *.py[cod]
 node_modules/
 .github/
+creds.json
