@@ -57,9 +57,21 @@ def validate_data(values):
     #Everything is fine
     return True
 
+def update_sales_worksheet(data):
+    """
+    Update sales worksheet, add new row with the list data provided
+    """
+    print("Updating sales worksheet...\n")
+    #We will access to the sale worksheet with code below
+    sales_worksheet = SHEET.worksheet("sales") 
+    #To pass our data to sales worksheet
+    sales_worksheet.append_row(data)
+    print("Sales worksheet updated successfully.\n")
+
 
 data = get_sales_data()
-
+sales_data = [int(num) for num in data]
+update_sales_worksheet(data)
  #In fact we would like our program to continue to request the data over and over again untill we get a valid response
 
 
